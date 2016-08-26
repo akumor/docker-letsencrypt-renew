@@ -5,6 +5,7 @@ RUN dnf -y update && \
     mkdir -p /etc/letsencrypt/
 
 EXPOSE 80
+EXPOSE 443
 
 ADD ./run.sh /root/
 
