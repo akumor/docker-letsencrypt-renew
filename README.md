@@ -13,13 +13,13 @@ docker build --rm=true --tag="<username>/docker-letsencrypt-renew" .
 First run a conatiner you want to capture the logs from. If your container was not given a name, grab the name and pass it to the container:
 
 ```
-docker run -it --rm -p 80:80 -e "BASE=/PATH_TO_CONFIGS /PATH_TO_CONFIGS" --volumes-from CONTAINER_NAME akumor/docker-letsencrypt-renew
+docker run -it --rm -p 80:80 --volumes-from CONTAINER_NAME akumor/docker-letsencrypt-renew
 ```
 
 or use docker-letsencrypt-renew with configuration files on the host machine
 
 ```
-docker run -it --rm -p 80:80 -e "BASE=/PATH_TO_CONFIGS /PATH_TO_CONFIGS" --volume=[HOST-DIR:]CONTAINER-DIR[:OPTIONS]]] CONTAINER_NAME akumor/docker-letsencrypt-renew
+docker run -it --rm -p 80:80 --volume=[HOST-DIR:]CONTAINER-DIR[:OPTIONS]]] akumor/docker-letsencrypt-renew
 ```
 
 # Resources
